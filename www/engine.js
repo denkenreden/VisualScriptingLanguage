@@ -40,7 +40,7 @@ function InterfaceDrawer(parentInterface) {
     this.cables = [];
     this.ctx = parentInterface.ctx;
 
-    this.objects.push(new DrawableObject());
+    this.objects.push(new SampleBlock());
 
     this.update = function () {
         for (var i = 0; i < this.cables.length; i++) {
@@ -144,3 +144,7 @@ function DrawableObject() {
         }
     }
 }
+
+// Vererbung FTW!
+function SampleBlock () {}
+SampleBlock.prototype = new DrawableObject();
