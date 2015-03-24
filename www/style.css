@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#whiteboard, #menu, #log {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+}
+
+#whiteboard {
+    top: 48px;
+    left: 0px;
+    background-color: rgba(15,15,15,1);
+}
+
+#menu {
+    background-color: rgba(31,31,31,1);
+    height: 48px;
+}
+
+
+#log {
+    background-color: rgba(31,31,31,1);
+}
