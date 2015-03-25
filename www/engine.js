@@ -8,6 +8,10 @@ window.onload = function () {
     };
 }
 
+/*
+    Interface
+    Manages the whole Interface (Layout)
+*/
 function Interface() {
     this.qML = 0.75;
     this.menu = document.getElementById("menu");
@@ -35,6 +39,10 @@ function Interface() {
     this.draw();
 }
 
+/*
+    InterfaceDrawer
+    Helps refreshing the Interface and implements interactivity
+*/
 function InterfaceDrawer(parentInterface) {
     this.objects = [];
     this.cables = [];
@@ -59,7 +67,10 @@ function InterfaceDrawer(parentInterface) {
         }
     }
 }
-
+/*
+    Enum
+    Helperclass for Enums
+*/
 function Enum() {
     for (var i = 0; i < arguments.length; ++i) {
         this[arguments[i]] = i;
@@ -67,8 +78,16 @@ function Enum() {
     return this;
 }
 
+/*
+    Ports
+    Defines available Port-Types
+*/
 Ports = new Enum("boolean", "number", "string");
 
+/*
+    Port
+    A Port (Input/Output) connects an object to others
+*/
 function Port(type, name, description) {
     this.type = type;
     this.name = name;
@@ -102,6 +121,10 @@ function Port(type, name, description) {
     }
 }
 
+/*
+    DrawableObject
+    A prototype for drawable objects (vars, operators etc.)
+*/
 function DrawableObject() {
     this.x = 20;
     this.y = 20;
@@ -145,6 +168,6 @@ function DrawableObject() {
     }
 }
 
-// Vererbung FTW!
+// Defines a SampleBlock by inheriting Attributes and Methodes from the DrawableObject class
 function SampleBlock () {}
 SampleBlock.prototype = new DrawableObject();
