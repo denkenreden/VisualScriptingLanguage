@@ -7,6 +7,7 @@ html, body, #wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #whiteboard, #menu, #log {
@@ -24,9 +25,35 @@ html, body, #wrapper {
 #menu {
     background-color: rgba(31,31,31,1);
     height: 48px;
+    font-size: 14px;
 }
 
 
 #log {
     background-color: rgba(31,31,31,1);
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.log.entry {
+    box-sizing: border-box;
+    padding: 2px 16px;
+    background-color: rgba(180,180,180,1);
+    border-bottom: solid 1px rgba(195,195,195,1);
+}
+
+.log.entry.success {
+    background-color: rgba(160,240,120,1);
+    border-bottom: solid 1px rgba(175,255,135,1);
+}
+
+.log.entry.warning {
+    background-color: rgba(240,240,120,1);
+    border-bottom: solid 1px rgba(255,255,135,1);
+}
+
+.log.entry.error {
+    background-color: rgba(240,120,120,1);
+    border-bottom: solid 1px rgba(255,135,135,1);
 }

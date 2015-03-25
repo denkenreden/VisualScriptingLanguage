@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Visual Scripting Language</title>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="style.css">
         <script src="engine.js"></script>
     </head>
@@ -15,9 +16,6 @@
                 </canvas>
             </div>
             <div id="log">
-                <div class="log info">
-                    Engine startet
-                </div>
             </div>
         </div>
     </body>
